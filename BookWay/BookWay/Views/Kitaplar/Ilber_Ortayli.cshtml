@@ -1,0 +1,338 @@
+﻿@using BookWay.Models.Entity
+@model List<Yorum>
+@{
+    @ViewBag.message
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<html>
+<head>
+    <title>kitapyolu.com</title>
+    <script type="text/javascript" src="~/Scripts/JQery.js"></script>
+    
+
+    <style>
+
+        .resim {
+                float: left;
+                margin: 0px 0px 0px 0px;
+                
+            }
+        .yazi {
+            color: green;
+            height: 390px;
+        }
+        .resimm {
+                float: right;
+                margin: 0px 1070px 10px 10px;
+            }
+
+        .ilber {
+            border-color: #08c221;
+            border-width: 5px;
+            border-style: double;
+            border-right: firebrick;
+            background-color: rgb(226, 196, 169);
+        }
+
+        .funfun {
+            border-color: #08c221;
+            border-width: 5px;
+            border-style: double;
+            border-left: firebrick;
+        }
+
+        div {
+            display: none;
+            border-style: solid;
+            border-color: #DBCDC0;
+            border-width: 10px 10px 10px 0px;
+            margin-bottom: 5px;
+        }
+
+        .totop a {
+            display: none;
+        }
+
+        a, a:visited {
+            color: #33739E;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+        }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+        #loadMore {
+            padding: 10px;
+            text-align: center;
+            background-color: yellowgreen;
+            color: #fff;
+            border-width: 0 1px 10px 1000px;
+            border-style: solid;
+            border-color: #DBCDC0;
+            box-shadow: 0 1px 1px #ccc;
+            transition: all 600ms ease-in-out;
+            -webkit-transition: all 600ms ease-in-out;
+            -moz-transition: all 600ms ease-in-out;
+            -o-transition: all 600ms ease-in-out;
+        }
+
+            #loadMore:hover {
+                background-color: rgb(202, 101, 101);
+                color: #fff;
+            }
+              #personel {
+border-collapse: collapse;
+width: 100%;
+}
+ 
+#personel td, #personel th {
+border: 1px solid #ddd;
+padding: 8px;
+}
+ 
+#personel tr:nth-child(even){background-color: #f2f2f2;}
+ 
+#personel tr:hover {
+background-color: #2ecc71;
+color:#fff;
+}
+
+            #personel th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #2c3e50;
+                color: white;
+            }
+
+        #btn2 {
+            font-size: 15px;
+            color: #fff;
+            background: #3b991e;
+            background: -moz-linear-gradient(top, #208308 0%, #6fa805 50%, #08c221 51%, #43d15a 100%);
+            background: -webkit-linear-gradient(top, #208308 0%, #6fa805 50%, #08c221 51%, #43d15a 100%);
+            background: linear-gradient(to bottom, #208308 0%, #6fa805 50%, #08c221 51%, #43d15a 100%);
+            border: 3px solid rgb(255, 255, 255);
+            text-decoration: none;
+            padding: 10px -5px;
+            font-family: "Arial",serif;
+            border-radius: 0px;
+            transition: all .1s linear;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px 2px #333;
+            font-weight: bold;
+            transition: all .6s ease;
+        }
+    </style>
+    <script>
+
+$(function () {
+    $("div").slice(0, 4).show();
+    $("#loadMore").on('click', function (e) {
+        e.preventDefault();
+        $("div:hidden").slice(0, 4).slideDown();
+        if ($("div:hidden").length == 0) {
+            $("#load").fadeOut('slow');
+        }
+        $('html,body').animate({
+            scrollTop: $(this).offset().top
+        }, 1500);
+    });
+});
+
+
+
+
+
+    </script>
+
+    <style>
+        .checked {
+            color: orange;
+        }
+    </style>
+
+</head>
+<body bgcolor="#DBCDC0">
+
+
+    <!--<font color="green"> </font>     <TABLO GELECEK>    -->
+    <table>
+        <tr>
+            <td>
+                <div class="resim">
+                    <a href="/Home/GirisYap/"> <img src="~/Content/font/okuyan Maymun.PNG" width="170px" height="170px">
+                </div>
+            <td>
+                <div class="resimm">
+                    <br><br>
+                    <b href="/Home/GirisYap/" class="yazi"><h1> KitapYolu.com</h1></b>
+                </div>
+                </a>
+            </td>
+            </td>
+        </tr>
+    </table>
+
+
+    <br>
+    <br>
+
+
+    <table align="center">
+        <div class="ilberbilgi">
+            <tr align="center">
+                <td class="ilber">
+                    <img src="/Content/font/ilber.PNG">
+
+
+                <td>
+                <td class="funfun">
+
+
+                    <h2>
+                        Bir Ömür Nasıl Yaşanır?
+                        <p> Hayatta Doğru Seçimler İçin Öneriler
+                    </h2><br><br>
+                    “Cesur olun. Kendinizi rahat hissettiğiniz alanın dışında pencereler açın.  Farklı
+                    dünyalarla ancak böyle tanışırsınız. <br>Ben hep yerimde dursaydım, dünyamı değiştirecek insanları aramasaydım,
+                    bugün tanıdığınız ben olmazdım. Bir<br> insanın bittiği an, miskinliğe esir olduğu andır.  İnsan,
+                    konforundan vazgeçmeyi göze almalıdır. Kendi dünyasını<br> yerinden kendisi oynatmalıdır.”<b>
+                        İlber Ortaylı
+                    </b></p><br>
+
+                    <div>
+                        <p>
+                            İlber Ortaylı, yediden yetmişe herkesin faydalanacağı, bilge şahsiyetinden ve yaşam tecrübesinden süzülen
+                            tavsiyelerden <br> oluşan bir eserle karşımızda. İlber Hoca bu kitapta, bir insanın, çocukluktan itibaren hayatın
+                            hemen her alanında ihtiyaç <br>duyacağı çözümleri nasıl bulabileceğini örnekler vererek anlatıyor. “Herkes kendi
+                            talihinin mimarıdır” sözünü hatırlatarak, <br> kendi yolunu çizmenin ne anlama geldiğini tüm kritik noktalarıyla
+                            yorumluyor.
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            Bir ömrü hakkıyla yaşayabilmek ve yaşanan her andan tat alabilmek için önce ne lazımdır?
+                            - İnsan hayatı kaç dönemden <br>oluşur  ve her bir dönemde neleri tecrübe etmek gerekir?  15, 25, 40 ve 55 yaşları neden birer eşiktir?
+                            - İnsan kimden,<br> ne öğrenebilir?  Kendi kendini yetiştirmek nasıl mümkün olur?
+                            - Kişi mesleğini  neye göre seçmelidir?
+                            - Bir işin uzmanı  <br>olmak ve o uzmanlık bilgisiyle çalışmak için nelere ihtiyaç vardır?
+                            - Bir dil, en iyi nasıl ve ne zaman öğrenilir?
+                            - En verimli<br> sonucu alabilmek için nasıl çalışmak gerekir?
+                            - Sorumluluk sahibi bir insan, kendisi veya çocukları için nasıl bir eğitim modeli<br> aramalıdır?
+                            - Hayata değer katmak için ne tür insanları arayıp bulmak gerekir?
+                            - Doğru kararları alabilmek için en çok kimleri<br> dinlemek gerekir?
+                            - En iyi nasıl seyahat edilir; bir şehir nasıl dolaşılır? Hangi müze, hangi meydan, hangi sokakları görmek için <br>  dünyanın bir ucuna kadar gidilebilir?
+                            - İyi film, güzel müzik, doğru kitap nedir? Hangi temel eserleri dinlemeli, okumalı ve <br> seyretmeliyiz?
+                            - İnsan yaşadığı şehirden tam manasıyla nasıl yararlanabilir?
+                        </p>
+
+                        <p>
+                            “Bir Ömür Nasıl Yaşanır?”, ülkemizin medarıiftiharı olmuş bir tarihçinin gözünden, insanın hayattaki anlam arayışına,
+                            bu <br> arayışın tadını nasıl çıkaracağına ve süreç boyunca karşılaşacağı zorluklarla nasıl baş etmesi gerektiğine dair çok
+                            özel bir kılavuz…
+                        </p>
+                    </div>
+                    <div>
+
+                        Dil	Türkçe <br>
+                        Kağıt Cinsi	2. Hamur <br>
+                        Cilt Tipi	Ciltsiz <br>
+                        Basım Yeri	TÜRKİYE <br>
+                        Sayfa Sayısı	208 <br>
+                        Yayın Tarihi	Haziran-2020 <br>
+                        Baskı Sayısı	20. Baskı <br>
+                        Ölçü	13,5x21 <br>
+                        </p>
+
+                    </div>
+                    <a href="#" id="loadMore">Load More</a>
+
+                    <p class="totop">
+                        <a href="#top">Back to top</a>
+                    </p>
+
+
+
+                <td>
+                </td>
+
+
+                </td>
+
+
+
+                </td>
+
+
+                </td>
+
+
+            </tr>
+
+            <tr>
+                <td>
+
+                    <h2>Star Rating</h2>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+
+                </td>
+            </tr>
+        </div>
+    </table>
+
+
+    <h2>Yorumlar</h2>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300" rel="stylesheet">
+    <table class="table table-bordered" id="personel">
+
+        <tr>
+            <th>Gönderen</th>
+
+            <th>Mesaj</th>
+            <th>Tarih</th>
+        </tr>
+        <tr>
+        </tr>
+
+        @foreach (var x in Model)
+        {
+            if (x.KITAP == "Bir Ömür Nasıl Yaşanır")
+            {
+                <tr>
+                    <td>@x.GONDEREN </td>
+
+                    <td>@x.ICERIK </td>
+                    <td>@x.TARIH </td>
+                </tr>
+                <tr>
+                </tr>
+            }
+        }
+
+
+
+    </table>
+    <br> <br>
+    <a href="/Yorum/Contact/"><input type="button" value="Yorum Yap" id="btn2" /></a>
+
+
+
+
+
+
+</body>
+
+</html>

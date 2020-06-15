@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<html>
+<head>
+    <title>kitapyolu.com</title>
+    <style>
+        input[type=text], select, textarea {
+            width: 100%; /* Full width */
+            padding: 12px; /* Some padding */
+            border: 1px solid #ccc; /* Gray border */
+            border-radius: 4px; /* Rounded borders */
+            box-sizing: border-box; /* Make sure that padding and width stays in place */
+            margin-top: 6px; /* Add a top margin */
+            margin-bottom: 16px; /* Bottom margin */
+            resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+        }
+
+        /* Style the submit button with a specific background color etc */
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            /* When moving the mouse over the submit button, add a darker green color */
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+
+        /* Add a background color and some padding around the form */
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        #bos{
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body bgcolor="#DBCDC0">
+    <div class="resim">
+        <table>
+            <tr>
+                <td>
+                    <img src="/Content/font/okuyan maymun.PNG" width="170px" height="170px">
+                </td>
+                <td>
+                    <a href="/Home/GirisYap/" class="yazi"><h1> KitapYolu.com</h1></a>
+
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    <div class="container">
+        <form action="/Yorum/Contact/" method="post" role="form">
+
+            <input type="text" id="fname" name="GONDEREN" placeholder="Gönderen">
+            <input type="text" id="lname" name="TARIH" placeholder="Tarih">
+            <input type="text" id="book_name" name="KITAP" placeholder="Kitap Adı">
+            <textarea id="subject" name="ICERIK" placeholder="Yorum yazınız..." style="height:200px"></textarea>
+
+            <a href="/Home/GirisYap/"><input type="submit" value="Yorum Yap " /></a>
+            
+            <a href="/Yorum/Index/"><input type="button" value="Yorumları Listele" /></a>
+
+        </form>
+
+       
+
+    </div>
+
+</body>
+    </html>
+

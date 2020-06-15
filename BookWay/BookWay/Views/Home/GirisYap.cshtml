@@ -1,0 +1,1316 @@
+﻿
+@{
+    Layout = null;
+    @ViewBag.message
+}
+
+    <html>
+    <head>
+
+        <title>kitapyolu.com</title>
+        <script src="~/Scripts/JQery.js"></script>
+
+
+        <style>
+
+
+            b:hover {
+                color: rgba(173, 83, 10, 0.829);
+            }
+
+            .yazi {
+                color: green;
+                height: 390px;
+            }
+
+            .resim {
+                float: left;
+                margin: 0px 0px 10px 10px;
+            }
+
+            .resimm {
+                float: right;
+                margin: 0px 1070px 10px 10px;
+            }
+
+            .tablo {
+                float: center;
+                margin: 0px 770px -10px 0px;
+            }
+
+            .formm {
+                float: right;
+                margin: -120px 30px -100px 0px;
+                color: darkred;
+                line-height: 0px;
+                padding: 0ch;
+            }
+
+            .bs1 {
+                color: rgb(219, 126, 11);
+            }
+
+            .kayan {
+                background-color: burlywood;
+            }
+
+            #btnUye {
+                font-size: 15px;
+                color: #fff;
+                background: #3b991e;
+                background: -moz-linear-gradient(top, #208308 0%, #6fa805 50%, #08c221 51%, #43d15a 100%);
+                background: -webkit-linear-gradient(top, #208308 0%, #6fa805 50%, #08c221 51%, #43d15a 100%);
+                background: linear-gradient(to bottom, #208308 0%, #6fa805 50%, #08c221 51%, #43d15a 100%);
+                border: 3px solid rgb(255, 255, 255);
+                text-decoration: none;
+                padding: 10px -5px;
+                font-family: "Arial",serif;
+                border-radius: 0px;
+                transition: all .1s linear;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                border-radius: 10px;
+                box-shadow: 2px 2px 2px 2px #333;
+                font-weight: bold;
+                transition: all .6s ease;
+            }
+
+            .btn {
+                font-size: 15px;
+                color: #fff;
+                background: #3b991e;
+                background: -moz-linear-gradient(top, #208308 0%, #6fa805 50%, #08c221 51%, #43d15a 100%);
+                background: -webkit-linear-gradient(top, #208308 0%, #6fa805 50%, #08c221 51%, #43d15a 100%);
+                background: linear-gradient(to bottom, #208308 0%, #6fa805 50%, #08c221 51%, #43d15a 100%);
+                border: 3px solid rgb(255, 255, 255);
+                text-decoration: none;
+                padding: 10px -5px;
+                font-family: "Arial",serif;
+                border-radius: 0px;
+                transition: all .1s linear;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                border-radius: 10px;
+                box-shadow: 2px 2px 2px 2px #333;
+                font-weight: bold;
+                transition: all .6s ease;
+            }
+            .m-login__signin{ 
+                margin-right:  50px ;
+            }
+            #yazi1{
+                text-shadow:#999999 2px 2px 1px;
+                color:#2c3e50; 
+
+                font-family:Verdana, Arial, Helvetica, sans-serif; 
+                font-size:18px; 
+
+            }
+            input[type=text] {
+                border: 2px solid DeepSkyBlue;
+                border-radius: 4px;
+            }
+            input[type=password] {
+
+                 border: 2px solid DeepSkyBlue;
+
+                 border-radius: 4px;
+            }
+            .signupbtn {
+                padding: 14px 20px;
+                background-color: #74b9ff;
+                margin-right: 5px;
+            }
+            .sekil{
+                text-shadow:#999999 2px 2px 1px;
+                color:#34495e; 
+
+                font-family:Verdana, Arial, Helvetica, sans-serif;
+                font-size:18px;
+            }
+        </style>
+
+
+
+
+
+    </head>
+    <body bgcolor="#DBCDC0">
+
+
+        <div class="resim">
+            <table>
+                <tr>
+                    <td>
+                        <img src="/Content/font/okuyan maymun.PNG" width="170px" height="170px">
+                    </td>
+                    <td>
+                        <a href="/Home/GirisYap/" class="yazi"><h1> KitapYolu.com</h1></a>
+
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+
+        <!--Burdan kestim-->
+
+
+        <table class="uyegiris" align="right">
+            <tr>
+
+                <td>
+
+                    <!--begin::Body-->
+                    <div class="m-login__body">
+
+                        <!--begin::Signin-->
+                        <div class="m-login__signin">
+                            <div class="m-login__title">
+                                @if (Session["Kullanıcı"] != null)
+                                {
+                                <div class="sekil">
+                                    <h2>@Session["Kullanıcı"] adlı kullanıcı ile giriş yapıldı.</h2>
+                                    <a href="/Login/LogIn/"><input type="submit" class="signupbtn" value="Çıkış Yap" /></a>
+                                </div>
+                                }
+
+
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+
+
+
+        <style>
+            .uyegiris {
+                color: rgb(182, 17, 17);
+            }
+        </style>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <script>
+
+            document.getElementById("btnUye")
+                .onclick = function () {
+                    window.setTimeout(function () { location.href = '/Uye/UyeEkle/'; }, 100);
+                };
+        </script>
+
+
+
+
+
+
+
+        <br>
+        <div class="tablo1">
+
+            <ul>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <li>
+                    <a href="#coksatanlar">Çok Satan Kitaplar</a>
+                    <ul>
+                        <li><a href="/Home/en_cok_edebiyat/">Çok Satan Edebiyat Kitapları</a></li>
+
+                        <li><a href="/Home/en_cok_cocuk/">Çok Satan Çocuk Kitapları</a></li>
+
+
+                        <li><a href="/Home/cok_satan_aylik/">Aylık Çok Satan Kitaplar</a></li>
+
+                    </ul>
+                </li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+                <li>
+                    <a href="#">Yeni Çıkan Kitaplar</a>
+                    <ul>
+                        <li><a href="/Home/yeni_cikan_sinav/">Yeni Çıkan Sınav Kitapları</a></li>
+
+                        <li><a href="/Home/yeni_cikan_cocuk/">Yeni Çıkan Çocuk Kitapları</a></li>
+
+
+                        <li><a href="/Home/yeni_cikan_bilgisayar/">Yeni Çıkan Bilgisayar Kitapları</a></li>
+
+                    </ul>
+                </li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+                <li>
+                    <a href="/Home/tum_kitaplar/">Tüm Kitaplar</a>
+                    
+
+                </li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+                <li>
+                    <a href="/Home/iletisim/">İletişim</a>
+                </li>
+            </ul>
+
+
+        </div>
+
+        <style>
+
+            .tablo1 {
+                border-style: solid;
+                border-width: 3px;
+                border-color: rgb(20, 148, 3);
+            }
+
+            ul {
+                list-style-type: none;
+                margin: 0;
+                width: 1462px;
+                padding: 0;
+                overflow: hidden;
+                background-color: rgb(133, 102, 205);
+                z-index: 10000;
+            }
+
+            li {
+                display: inline-block;
+            }
+
+                li a {
+                    display: block;
+                    color: wheat;
+                    text-align: center;
+                    padding: 25px 46px;
+                    text-decoration: none;
+                }
+
+                    li a:hover {
+                        background-color: #f39c12;
+                    }
+
+            ul li ul {
+                background-color: rgb(133, 102, 205);
+                display: none;
+                position: absolute;
+                width: 250px
+            }
+
+            ul li:hover ul {
+                display: block;
+            }
+
+            li ul li {
+                display: block;
+            }
+        </style>
+        </div>
+
+
+        <!--- <script language="javascript" src="http://ir.sitekodlari.com/gununsozu1.js" class="soz"></script> -->
+        <!---  UYARI MESAJI
+
+    <script>
+        alert("Sayfa yenileniyor")
+    </script>
+    -->
+
+        <script>
+
+            $(function () {
+                $("button").click(function () {
+                    $("a[target='_blank']").hide();
+                });
+
+
+            });
+
+        </script>
+
+
+    
+
+
+
+
+
+
+        <div class="carousel-one">
+
+            <div class="mySlides fade-In">
+                <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/incirkuslari.html">
+                    <img src="~/Content/font/kapak1.PNG" />
+                </a>
+            </div>
+            <div class="mySlides fade-In">
+                <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/stephen.html">
+                    <img src="~/Content/font/kapak2.PNG" />
+                </a>
+            </div>
+            <div class="mySlides fade-In">
+                <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/yabancı.html">
+                    <img src="~/Content/font/kapak3.PNG" />
+                </a>
+            </div>
+
+            <div class="mySlides fade-In">
+                <a href="">
+                    <img src="~/Content/font/kapak4.PNG" />
+                </a>
+            </div>
+
+            <div class="mySlides fade-In">
+                <img src="~/Content/font/kapak5.PNG" />
+            </div>
+
+            <div class="mySlides fade-In">
+                <img src="~/Content/font/kapak6.PNG" />
+            </div>
+
+            <div class="mySlides fade-In">
+                <img src="~/Content/font/kapak7.PNG" />
+            </div>
+
+            <div class="mySlides fade-In">
+                <img src="~/Content/font/kapak8.PNG" />
+            </div>
+
+            <div class="mySlides fade-In">
+                <img src="~/Content/font/kapak9.PNG" />
+
+            </div>
+            <div class="mySlides fade-In">
+                <img src="~/Content/font/kapak10.PNG" />
+            </div>
+
+        </div>
+
+
+        <!--Next and previous buttons start-->
+        <!--Next and previous buttons end-->
+        <!--dots start-->
+        <div class="dots">
+            <span class="dot dot1"></span>
+            <span class="dot dot2"></span>
+            <span class="dot dot3"></span>
+            <span class="dot dot4"></span>
+            <span class="dot dot5"></span>
+            <span class="dot dot6"></span>
+            <span class="dot dot7"></span>
+            <span class="dot dot8"></span>
+            <span class="dot dot9"></span>
+            <span class="dot dot10"></span>
+        </div>
+        <!--dots end-->
+        <!--carousel end-->
+
+
+        <style>
+            /*carousel start*/
+            .carousel-one {
+                max-width: 700px;
+                height: 500px;
+                margin: auto;
+                position: relative;
+            }
+
+                .carousel-one .mySlides {
+                    display: none;
+                }
+
+                    .carousel-one .mySlides img {
+                        width: 150%;
+                        height: 80%;
+                        margin: 10px 0px 0px -170px;
+                        border-style: solid;
+                        border-width: 4px;
+                        border-color: rgb(226, 163, 46);
+                    }
+
+                    .carousel-one .mySlides .caption-text {
+                        color: #fff;
+                        font-weight: 900;
+                        font-size: 30px;
+                        padding: 8px 12px;
+                        position: absolute;
+                        bottom: 38px;
+                        width: 100%;
+                        text-align: center;
+                        border-style: solid;
+                        border-width: 4px;
+                        border-color: rgb(226, 163, 46);
+                    }
+
+                    .carousel-one .mySlides .number-text {
+                        color: darkorange;
+                        font-size: 12px;
+                        padding: 8px 12px;
+                        position: absolute;
+                        top: 0px;
+                    }
+
+            .editor {
+                color: rgb(184, 17, 17);
+            }
+
+            .carousel-one .fade-In {
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+
+
+
+
+
+            .dots {
+                margin: 30px 70px 40px 570px;
+            }
+
+
+            .dot {
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+                margin: 0px 2px;
+                background-color: rgb(126, 10, 10);
+                border-radius: 0%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+
+                .dot:hover {
+                    background-color: brown
+                }
+
+            .active {
+                background-color: darkgreen
+            }
+
+            @@keyframes fade {
+                from {
+                    /*IE8*/
+                    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+                    /*IE 5-7*/
+                    filter: alpha(opacity=40);
+                    /*Modern Browsers*/
+                    opacity: 0.4;
+                }
+
+                to {
+                    /*IE8*/
+                    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+                    /*IE 5-7*/
+                    filter: alpha(opacity=100);
+                    /*Modern Browsers*/
+                    opacity: 1;
+                }
+            }
+            /*carousel end*/
+        </style>
+        <script>
+            //carousel start
+
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            //Next and previous buttons start
+            //  $(".geri-slide").click(function() {
+            //    plusSlides(-1);
+            //});
+
+            //  $(".ileri-slide").click(function() {
+            //    plusSlides(1);
+            // });
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+            //Next and previous buttons end
+
+            //dots start
+            $(".dot1").click(function () {
+                currentSlide(1);
+            });
+            $(".dot2").click(function () {
+                currentSlide(2);
+            });
+            $(".dot3").click(function () {
+                currentSlide(3);
+            });
+            $(".dot4").click(function () {
+                currentSlide(4);
+            });
+            $(".dot5").click(function () {
+                currentSlide(5);
+            });
+            $(".dot6").click(function () {
+                currentSlide(6);
+            });
+            $(".dot7").click(function () {
+                currentSlide(7);
+            });
+            $(".dot8").click(function () {
+                currentSlide(8);
+            });
+            $(".dot9").click(function () {
+                currentSlide(9);
+            });
+            $(".dot10").click(function () {
+                currentSlide(10);
+            });
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+            //dots end
+
+
+            function showSlides(n) {
+                var i;
+                var slides = $(".mySlides");
+                var dots = $(".dot");
+                if (n > slides.length) {
+                    slideIndex = 1;
+                }
+                if (n < 1) {
+                    slideIndex = slides.length;
+                }
+                for (var i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+
+                for (var i = 0; i < dots.length; i++) {
+                    dots[i].className.replace("active", "");
+                    dots[i].classList.remove("active");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+
+
+
+
+
+            //auto slides start
+            /*
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = $(".mySlides");
+
+                for (var i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+
+                slideIndex++;
+
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;
+                }
+
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 5000); // 5 saniyede bir resim değişecek
+            }
+            */
+            //auto slides end
+
+            //carousel end
+        </script>
+
+
+
+
+        <!-------------------------------------------------------------------------------------------------
+
+
+
+
+
+        <div style="padding-top: 10px">
+
+            <div style="display: inline-block; width: 31%;">
+            Konu:		<select name="category">
+                                <option value="0">- Bütün Konular -</option>
+                                <option value="200">Başvuru Kitapları</option>
+                                <option value="31">Bilgisayar</option>
+                                <option value="236">Bilim &amp; Mühendislik</option>
+                                <option value="2">Çocuk Kitapları</option>
+                                <option value="479">Dergi</option>
+                                <option value="283">Ders Kitapları</option>
+                                <option value="319">Diğer</option>
+                                <option value="436">Diğer Dildeki Yayınlar</option>
+                                <option value="64">Din</option>
+                                <option value="128">Edebiyat</option>
+                                <option value="359">Eğitim</option>
+                                <option value="371">Eğlence-Mizah</option>
+                                <option value="380">Ekonomi</option>
+                                <option value="424">Felsefe-Düşünce</option>
+                                <option value="212">Hobi</option>
+                                <option value="248">Hukuk</option>
+                                <option value="258">İslam</option>
+                                <option value="224">İstanbul Kitapları</option>
+                                <option value="731">Kadın-Erkek</option>
+                                <option value="77">Kültür</option>
+                                <option value="161">Müzik</option>
+                                <option value="760">Orijinal Dil</option>
+                                <option value="87">Psikoloji</option>
+                                <option value="753">Resim</option>
+                                <option value="344">Sağlık-Tıp</option>
+                                <option value="172">Sanat</option>
+                                <option value="737">Sınavlar</option>
+                                <option value="724">Sinema-Tiyatro</option>
+                                <option value="98">Siyaset</option>
+                                <option value="415">Sosyoloji</option>
+                                <option value="186">Spor</option>
+                                <option value="456">Şehir Kitapları</option>
+                                <option value="41">Tarih</option>
+                                <option value="403">Turizm-Gezi</option>
+                        </select>
+            </div>
+
+
+            <div style="display: inline-block; width: 27%;">
+                Fiyat Üst Sınır:		<input type="text" name="price" size="7" />
+                </div>
+
+                <div style="display: inline-block; width: 27%;">
+                İndirim Alt Sınır:		<select name="discount">
+                                    <option value="50">% 50</option>
+                                    <option value="60">% 60</option>
+                                    <option value="70">% 70</option>
+                                    <option value="80">% 80</option>
+                                    <option value="90">% 90</option>
+                            </select>
+                </div>
+                <input type="button" value="Kelepir Ara" id="button-bargain" class="right button" />
+            </div>
+            </div>
+        </div>
+    -->
+
+
+
+
+
+        <div class="kitaplarimerkezle" align="center">
+            <table class="yanyanakucukresimler" style="border: 1px solid rgb(20, 148, 3); color: rgb(2, 45, 48); width: 1100px; background-color:darksalmon">
+
+                <tr>
+
+                    <td>
+                        <a href="/Kitaplar/Yabanci/"><img class="resim-zoom" src="/Content/font/yabancı.PNG">
+
+                    </td>
+
+
+                    <td>
+                        <a href="/Kitaplar/Ilber_Ortayli/"> <img class="resim-zoom" src="/Content/font/ilber.PNG">
+
+
+                    </td>
+
+                    <td>
+                        <a href="/Kitaplar/Incir_Kuslari/"><img class="resim-zoom" src="/Content/font/incirkuslari.PNG">
+                    </td>
+
+
+                    <td>
+                        <a href="/Kitaplar/Stephen/"><img class="resim-zoom" src="/Content/font/stephen.PNG">
+
+                    </td>
+
+                    <td>
+                        <a href="/Kitaplar/Korluk/"><img class="resim-zoom" src="~/Content/font/körlük.PNG">
+
+                    </td>
+
+                    <td>
+                        <a href="/Kitaplar/Simyaci/"><img class="resim-zoom" src="~/Content/font/simyacı1.PNG">
+
+                    </td>
+
+                    <td>
+                        <a href="/Kitaplar/Seker_Portakali/"><img class="resim-zoom" src="~/Content/font/şekerportakalı.PNG">
+
+                    </td>
+
+                    <td>
+                        <a href="/Kitaplar/Bilinmeyen_Bir_Kadin/">  <img class="resim-zoom" src="~/Content/font/bilinmeyenbirkadın.PNG">
+
+                    </td>
+
+
+
+
+
+
+
+
+                </tr>
+
+
+
+
+            </table>
+
+        </div>
+
+
+        <script type="text/javascript">
+
+            $('#button-bargain').bind('click', function () {
+                url = 'index.php?route=product/bargain';
+
+                url += '&category=' + $('select[name=\'category\']').attr('value');
+                url += '&discount=' + $('select[name=\'discount\']').attr('value');
+
+                var price = $('input[name=\'price\']').attr('value');
+                if (price) {
+                    url += '&price=' + encodeURIComponent(price);
+                }
+
+                // Default filter_in_stock = 1
+                url += '&filter_in_stock=1';
+
+                location = url;
+            });
+
+
+            updateProductViews();
+
+            //--></script>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+
+
+        <table class="tablo">
+            <td>
+
+                <table class="bestseller">
+
+                    <tr>
+                        <td>
+                            <div class="image"><a href="https://www.kitapyurdu.com/kitap/korluk/426526.html"><img src="https://img.kitapyurdu.com/v1/getImage/fn:11219545/wi:40/wh:true" alt="Körlük" /></a></div>
+                        </td>
+
+                        <td class="data">
+                            <div>
+                                <div class="name"><a class="product-name" href="https://www.kitapyurdu.com/kitap/korluk/426526.html">Körlük</a></div>
+                                <div class="author" title="Jose Saramago">Jose Saramago</div>
+                            </div>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <div class="image"><a href="https://www.kitapyurdu.com/kitap/seker-portakali-ciltsiz/10139.html"><img src="https://img.kitapyurdu.com/v1/getImage/fn:11205405/wi:40/wh:true" alt="Şeker Portakalı (Ciltsiz)" /></a></div>
+                        </td>
+
+                        <td class="data">
+                            <div>
+                                <div class="name"><a class="product-name" href="https://www.kitapyurdu.com/kitap/seker-portakali-ciltsiz/10139.html">Şeker Portakalı (Ciltsiz)</a></div>
+                                <div class="author" title="Jose Mauro De Vasconcelos">Jose Mauro De Vasconcelos</div>
+                            </div>
+                        </td>
+                    </tr>
+
+
+
+
+                    <tr>
+                        <td>
+                            <div class="image"><a href="https://www.kitapyurdu.com/kitap/icimizdeki-seytan/12065.html"><img src="https://img.kitapyurdu.com/v1/getImage/fn:1105911/wi:40/wh:true" alt="İçimizdeki Şeytan" /></a></div>
+                        </td>
+
+                        <td class="data">
+                            <div>
+                                <div class="name"><a class="product-name" href="https://www.kitapyurdu.com/kitap/icimizdeki-seytan/12065.html">İçimizdeki Şeytan</a></div>
+                                <div class="author" title="Sabahattin Ali">Sabahattin Ali</div>
+                            </div>
+                        </td>
+                    </tr>
+
+
+
+
+                    <tr>
+                        <td>
+                            <div class="image"><a href="https://www.kitapyurdu.com/kitap/bir-omur-nasil-yasanir-amp-hayatta-dogru-secimler-icin-oneriler/493305.html"><img src="https://img.kitapyurdu.com/v1/getImage/fn:8070385/wi:40/wh:true" alt="Bir Ömür Nasıl Yaşanır? & Hayatta Doğru Seçimler İçin Öneriler" /></a></div>
+                        </td>
+
+                        <td class="data">
+                            <div>
+                                <div class="name"><a class="product-name" href="https://www.kitapyurdu.com/kitap/bir-omur-nasil-yasanir-amp-hayatta-dogru-secimler-icin-oneriler/493305.html">Bir Ömür Nasıl Yaşanır?</a></div>
+                                <div class="author" title="Prof. Dr. İlber Ortaylı">Prof. Dr. İlber Ortaylı</div>
+                            </div>
+                        </td>
+                    </tr>
+
+
+
+
+
+                    <tr>
+                        <td>
+                            <div class="image"><a href="https://www.kitapyurdu.com/kitap/simyaci-ciltsiz/27328.html"><img src="https://img.kitapyurdu.com/v1/getImage/fn:9043979/wi:40/wh:true" alt="Simyacı (Ciltsiz)" /></a></div>
+                        </td>
+
+                        <td class="data">
+                            <div>
+                                <div class="name"><a class="product-name" href="https://www.kitapyurdu.com/kitap/simyaci-ciltsiz/27328.html">Simyacı (Ciltsiz)</a></div>
+                                <div class="author" title="Paulo Coelho">Paulo Coelho</div>
+                            </div>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <div class="image"><a href="https://www.kitapyurdu.com/kitap/yabanci/10216.html"><img src="https://img.kitapyurdu.com/v1/getImage/fn:10757279/wi:40/wh:true" alt="Yabancı" /></a></div>
+                        </td>
+
+                        <td class="data">
+                            <div>
+                                <div class="name"><a class="product-name" href="https://www.kitapyurdu.com/kitap/yabanci/10216.html">Yabancı</a></div>
+                                <div class="author" title="Albert Camus">Albert Camus</div>
+                            </div>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <div class="image"><a href="https://www.kitapyurdu.com/kitap/1984/13506.html"><img src="https://img.kitapyurdu.com/v1/getImage/fn:10999571/wi:40/wh:true" alt="1984" /></a></div>
+                        </td>
+
+                        <td class="data">
+                            <div>
+                                <div class="name"><a class="product-name" href="https://www.kitapyurdu.com/kitap/1984/13506.html">1984</a></div>
+                                <div class="author" title="George Orwell">George Orwell</div>
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </td>
+
+
+
+
+            <td>
+
+
+
+                <table class="kayan" border="10" cellspacing="1" cellpadding="1" width="1200px" align="right">
+                    <tr align="center">
+                        <td>
+                            <onmouseover ="funda.direction='left',
+                                         funda.scrollAmount="5"
+                                         onMouseOut="funda.scrollAmount=2,
+           funda.scrolldelay=10" onClick="funda.scrollAmount=5" onDblClick="funda.scrollAmount=5 ">
+                        </td>
+                        <td width="950" align="center" height="-500px">
+                            <marquee direction=right scrollAmount=15 id="funda" scrollDelay=20 onmouseOver="this.stop();" onmouseOut="this.start();">
+                                <span onMouseOver="Goster('1')"><a href="/Kitaplar/Incir_Kuslari/"> <img src="~/Content/font/incirkuslari.PNG"> </a> </span>
+                                <span onMouseOver="Goster('2')"> <a href="/Kitaplar/Ilber_Ortayli/">  <img src="~/Content/font/ilber.PNG">  </a> </span>
+                                <span onMouseOver="Goster('3')"><a href="/Kitaplar/Stephen/"><img src="~/Content/font/stephen.PNG"></span>
+                                <span onMouseOver="Goster('4')"><a href="/Kitaplar/Yabanci/"><img src="~/Content/font/yabancı.PNG"></span>
+
+                            </marquee>
+
+                        </td>
+                        <td width="120" align="center"> <onMouseOver ="funda.direction='right',funda.scrollAmount=5" onMouseOut="funda.scrollAmount=2,funda.scrolldelay=10" onClick="funda.scrollAmount=5" onDblClick="funda.scrollAmount=5"></td>
+
+
+                    </tr>
+                </table>
+                <style>
+                    .encokokunan {
+                        text-align: right;
+                        align-items: right;
+                    }
+
+                    .encokokunaniki {
+                        text-align: left;
+                    }
+
+                    .kayan {
+                        border-style: double;
+                        border-color: mediumaquamarine;
+                        border-width: 3px;
+                    }
+                </style>
+
+
+
+            </td>
+
+
+
+
+
+            <td>
+
+                <table class="bestseller">
+
+                    <tr>
+                        <td>
+                            <div class="image"><a href="https://www.kitapyurdu.com/kitap/korluk/426526.html"><img src="https://img.kitapyurdu.com/v1/getImage/fn:11219545/wi:40/wh:true" alt="Körlük" /></a></div>
+                        </td>
+
+                        <td class="data">
+                            <div>
+                                <div class="name"><a class="product-name" href="https://www.kitapyurdu.com/kitap/korluk/426526.html">Körlük</a></div>
+                                <div class="author" title="Jose Saramago">Jose Saramago</div>
+                            </div>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <div class="image"><a href="https://www.kitapyurdu.com/kitap/seker-portakali-ciltsiz/10139.html"><img src="https://img.kitapyurdu.com/v1/getImage/fn:11205405/wi:40/wh:true" alt="Şeker Portakalı (Ciltsiz)" /></a></div>
+                        </td>
+
+                        <td class="data">
+                            <div>
+                                <div class="name"><a class="product-name" href="https://www.kitapyurdu.com/kitap/seker-portakali-ciltsiz/10139.html">Şeker Portakalı (Ciltsiz)</a></div>
+                                <div class="author" title="Jose Mauro De Vasconcelos">Jose Mauro De Vasconcelos</div>
+                            </div>
+                        </td>
+                    </tr>
+
+
+
+
+
+                    <tr>
+                        <td>
+                            <div class="image"><a href="https://www.kitapyurdu.com/kitap/icimizdeki-seytan/12065.html"><img src="https://img.kitapyurdu.com/v1/getImage/fn:1105911/wi:40/wh:true" alt="İçimizdeki Şeytan" /></a></div>
+                        </td>
+
+                        <td class="data">
+                            <div>
+                                <div class="name"><a class="product-name" href="https://www.kitapyurdu.com/kitap/icimizdeki-seytan/12065.html">İçimizdeki Şeytan</a></div>
+                                <div class="author" title="Sabahattin Ali">Sabahattin Ali</div>
+                            </div>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <div class="image"><a href="https://www.kitapyurdu.com/kitap/kirmizi-pazartesi/13006.html"><img src="https://img.kitapyurdu.com/v1/getImage/fn:10680477/wi:40/wh:true" alt="Kırmızı Pazartesi" /></a></div>
+
+                        </td>
+                        <td class="data">
+                            <div>
+                                <div class="name"><a class="product-name" href="https://www.kitapyurdu.com/kitap/kirmizi-pazartesi/13006.html">Kırmızı Pazartesi</a></div>
+                                <div class="author" title="Gabriel Garcia Marquez">Gabriel Garcia Marquez</div>
+                            </div>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="image"><a href="https://www.kitapyurdu.com/kitap/bir-omur-nasil-yasanir-amp-hayatta-dogru-secimler-icin-oneriler/493305.html"><img src="https://img.kitapyurdu.com/v1/getImage/fn:8070385/wi:40/wh:true" alt="Bir Ömür Nasıl Yaşanır? & Hayatta Doğru Seçimler İçin Öneriler" /></a></div>
+                        </td>
+
+                        <td class="data">
+                            <div>
+                                <div class="name"><a class="product-name" href="https://www.kitapyurdu.com/kitap/bir-omur-nasil-yasanir-amp-hayatta-dogru-secimler-icin-oneriler/493305.html">Bir Ömür Nasıl Yaşanır?</a></div>
+                                <div class="author" title="Prof. Dr. İlber Ortaylı">Prof. Dr. İlber Ortaylı</div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="image"><a href="https://www.kitapyurdu.com/kitap/hayvan-ciftligi-ciltsiz/30574.html"><img src="https://img.kitapyurdu.com/v1/getImage/fn:11213864/wi:40/wh:true" alt="Hayvan Çiftliği (Ciltsiz)" /></a></div>
+                        </td>
+
+                        <td class="data">
+                            <div>
+                                <div class="name"><a class="product-name" href="https://www.kitapyurdu.com/kitap/hayvan-ciftligi-ciltsiz/30574.html">Hayvan Çiftliği</a></div>
+                                <div class="author" title="George Orwell">George Orwell</div>
+                            </div>
+                        </td>
+                    </tr>
+
+
+
+                    <td>
+                        <div class="image"><a href="https://www.kitapyurdu.com/kitap/1984/13506.html"><img src="https://img.kitapyurdu.com/v1/getImage/fn:10999571/wi:40/wh:true" alt="1984" /></a></div>
+                    </td>
+
+                    <td class="data">
+                        <div>
+                            <div class="name"><a class="product-name" href="https://www.kitapyurdu.com/kitap/1984/13506.html">1984</a></div>
+                            <div class="author" title="George Orwell">George Orwell</div>
+                        </div>
+                    </td>
+                    </tr>
+
+                </table>
+
+            </td>
+
+
+
+
+
+
+
+
+
+
+        </table>
+
+
+
+
+
+
+
+        <!---          SAYILARI KAYDIRARAK SLİDE
+    <ul id="Icerikler">
+        <li><img src="ilber.PNG" width="620" height="315"/></li>
+        <li><img src="incirkuslari.PNG" width="620" height="315"/></li>
+        <li><img src="kitap.PNG" width="620" height="315"/></li>
+        <li><img src="stephen.PNG" width="620" height="315"/></li>
+        <li><img src="yabancı.PNG" width="620" height="315"/></li>
+        <li><img src="incirkuslari.PNG" width="620" height="315"/></li>
+        <li><img src="stephen.PNG" width="620" height="315"/></li>
+    </ul>
+
+    <ul id="IcerikNolar">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </ul>
+    <style>
+        #IcerikNolar, #Icerikler { list-style: none; clear: both; }
+    #IcerikNolar li{
+        width: 15px;
+        height: 15px;
+        background-color: crimson;
+        color: #ffffff;
+        margin: left;
+
+        float: left;
+    }
+    #Icerikler li {
+        align-items: center;
+        width: 700px;
+        height: 315px;
+        background-color: crimson;
+        float: center;
+        overflow: hidden;
+        display: none; /*ilk basta gosterme */
+    }
+    </style>
+    <script src="Jqery/JQery.js"></script>
+      <script type="text/javascript">
+                $(document).ready(function(){
+                    $("#Icerikler li:first").show();
+
+                    $("#IcerikNolar li").mouseover(function(){
+
+                       Tiklanan=$(this).index();
+
+                       $("#Icerikler li").hide();
+                       //$("#Icerikler li").eq(Tiklanan).css("display", "block");
+                       $("#Icerikler li").eq(Tiklanan).fadeIn("slow");
+                    });
+                });
+            </script>
+
+
+
+
+         --->
+
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="kitaplarimerkezle" align="center">
+            <table class="yanyanakucukresimler" style="border: 1px solid rgb(20, 148, 3); color: rgb(2, 45, 48); width: 1100px; background-color:darksalmon">
+
+                <tr>
+
+                    <td>
+                        <a href="/Kitaplar/Yabanci/"><img class="resim-zoom" src="/Content/font/yabancı.PNG">
+
+                    </td>
+
+
+                    <td>
+                        <a href="/Kitaplar/Ilber_Ortayli/"> <img class="resim-zoom" src="/Content/font/birOmur.PNG">
+
+
+                    </td>
+
+                    <td>
+                        <a href="/Kitaplar/Incir_Kuslari/"><img class="resim-zoom" src="/Content/font/incirkuslari.PNG">
+                    </td>
+
+
+                    <td>
+                        <a href="/Kitaplar/Stephen/"><img class="resim-zoom" src="/Content/font/stephen.PNG">
+
+                    </td>
+
+                    <td>
+                        <a href="/Kitaplar/Korluk/"><img class="resim-zoom" src="/Content/font/körlük.PNG">
+
+                    </td>
+
+                    <td>
+                        <a href="/Kitaplar/Simyaci/"><img class="resim-zoom" src="/Content/font/simyacı1.PNG">
+
+                    </td>
+
+                    <td>
+                        <a href="/Kitaplar/Seker_Portakali/"><img class="resim-zoom" src="/Content/font/şekerportakalı.PNG">
+
+                    </td>
+
+                    <td>
+                        <a href="/Kitaplar/Bilinmeyen_Bir_Kadin/">  <img class="resim-zoom" src="/Content/font/bilinmeyenbirkadın.PNG">
+
+                    </td>
+
+
+
+            </table>
+
+        </div>
+
+
+        <style>
+            .resim-zoom {
+                width: 100px;
+                height: 100px;
+            }
+
+            .resim-zoom {
+                position: relative;
+                -webkit-transform: scale(1);
+                -ms-transform: scale(1);
+                -moz-transform: scale(1);
+                transition: all.3s ease-in;
+                -moz-transition: all.3s ease-in;
+                -webkit-transition: all.3s ease-in;
+                -ms-transition: all.3s ease-in;
+            }
+
+                .resim-zoom:hover {
+                    z-index: 2;
+                    -webkit-transform: scale(1.5);
+                    -ms-transform: scale(1.5);
+                    -moz-transform: scale(1.5);
+                    transform: scale(1.5);
+                }
+        </style>
+
+        <style>
+            ::-webkit-scrollbar {
+                width: 12px;
+                background-color: #7fe0a8;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background-color: #e2ac24;
+            }
+
+                ::-webkit-scrollbar-thumb:hover {
+                    background-color: #daa521;
+                }
+        </style>
+
+
+
+
+
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+        <div class="gidipgelentablo" align="center">
+
+            <marquee behavior=alternate bgcolor="#228b22" width="1100px">
+                <h2 align="center" class="renk">Ayın Tercih Edilenleri</h2>
+                <table frame="border">
+                    <tr>
+                        <td><a href="/Kitaplar/Korluk/"><img src="/Content/font/körlük.PNG"></td>
+
+                        <td><a href="/Kitaplar/Bilinmeyen_Bir_Kadin"><img src="/Content/font/bilinmeyenbirkadın.PNG"></td>
+
+                        <td><a href="/Kitaplar/Seker_Portakali/"><img src="/Content/font/şekerportakalı.PNG"></td>
+
+            </marquee>
+            </tr>
+            </table>
+        </div>
+
+
+
+        <style>
+            .renk {
+                color: darkred;
+            }
+
+            .gidipgelentablo {
+                width: 1100px;
+                float: right;
+                margin: 0px 170px 1110px 110px;
+                border-color: orangered;
+                border-style: solid;
+                border-width: 2px;
+            }
+        </style>
+
+
+        <script language="javascript" src="http://ir.sitekodlari.com/yukaricik8.js"></script>
+
+
+
+    </body>
+
+    </html>

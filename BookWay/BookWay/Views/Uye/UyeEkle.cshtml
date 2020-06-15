@@ -1,0 +1,202 @@
+﻿@model BookWay.Models.Entity.UyeKayit
+@{
+    ViewBag.Title = "UyeEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+    <html>
+    <head>
+        <title>kitapyolu.com</title>
+        <script src="Jqery/JQery.js"></script>
+
+        <style>
+
+
+            b:hover {
+                color: rgba(173, 83, 10, 0.829);
+            }
+
+            .yazi {
+                color: green;
+                height: 390px;
+            }
+
+            .resim {
+                float: left;
+                margin: 0px 0px 10px 10px;
+            }
+
+            .resimm {
+                float: right;
+                margin: 0px 1070px 10px 10px;
+            }
+
+            .tablo {
+                float: center;
+                margin: 0px 770px -10px 0px;
+            }
+
+            .formm {
+                float: right;
+                margin: -120px 30px -100px 0px;
+                color: darkred;
+                line-height: 0px;
+                padding: 0ch;
+            }
+
+            .bs1 {
+                color: rgb(219, 126, 11);
+            }
+            
+            #btn1 {
+                font-size: 15px;
+                color: #fff;
+                background: #3b991e;
+                background: -moz-linear-gradient(top, #208308 0%, #6fa805 50%, #08c221 51%, #43d15a 100%);
+                background: -webkit-linear-gradient(top, #208308 0%, #6fa805 50%, #08c221 51%, #43d15a 100%);
+                background: linear-gradient(to bottom, #208308 0%, #6fa805 50%, #08c221 51%, #43d15a 100%);
+                border: 3px solid rgb(255, 255, 255);
+                text-decoration: none;
+                padding: 10px -5px;
+                font-family: "Arial",serif;
+                border-radius: 0px;
+                transition: all .1s linear;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                border-radius: 10px;
+                box-shadow: 2px 2px 2px 2px #333;
+                font-weight: bold;
+                transition: all .6s ease;
+            }
+            input[type=text] {
+
+     border: 2px solid DeepSkyBlue;
+
+       border-radius: 4px;
+      }
+            input[type=email] {
+
+         border: 2px solid DeepSkyBlue;
+
+       border-radius: 4px;
+      }
+            input[type=password] {
+                border: 2px solid DeepSkyBlue;
+                border-radius: 4px;
+            }
+            .btn1{
+                text-shadow:#999999 2px 2px 1px;
+                color:#2c3e50; 
+
+                font-family:Verdana, Arial, Helvetica, sans-serif; 
+                font-size:18px;
+            }
+        </style>
+
+
+
+
+
+    </head>
+    <body bgcolor="#DBCDC0">
+
+
+        <table>
+            <tr>
+
+                <td>
+
+                    <!--<font color="green"> </font>     <TABLO GELECEK>    -->
+                    <div class="resim">
+                        <img src="~/Content/font/okuyan maymun.PNG" width="170px" height="170px">
+                    </div>
+                    <div class="resimm">
+                        <br><br>
+                        <a href="/Home/GirisYap/" class="yazi"><h1> KitapYolu.com</h1></a>
+                    </div>
+
+                    </a>
+                   
+                    <br><br><br><br><br><h2 class="hesap"> <h4 class="hesapAcma">Daha önceden kayıt olduysanız, lütfen <a href="/Login/LogIn/" class="yazi">Oturum Açma</a>  sayfasına gidiniz.</h4></h2>
+                </td>
+            </tr>
+
+            <tr>
+
+                <td align="center">
+                    <h4><center class="btn1">Hesap Oluştur</center></h4>
+                    <br><br><br><br>
+
+                    <form method="post" role="form" class="form-horizontal">
+                        <input type='hidden' name='csrfmiddlewaretoken' value='brGfMU16YyyG2QEcpLqhb3Zh8AvkYkJt' />
+                        <div class="form-group required control-label"><label class="col-md-2 control-label">Ad</label><div class="col-md-4"><input class="form-control" id="id_first_name" maxlength="30" name="AD" placeholder="first name" required="required" title="" type="text" /></div></div>
+                        <div class="form-group required control-label"><label class="col-md-2 control-label">Soyad</label><div class="col-md-4"><input class="form-control" id="id_last_name" maxlength="30" name="SOYAD" placeholder="last name" required="required" title="" type="text" /></div></div>
+                        <div class="form-group required control-label"><label class="col-md-2 control-label">E-mail</label><div class="col-md-4"><input class="form-control" id="id_email" name="EMAIL" placeholder="E-mail" required="required" title="" type="email" /></div></div>
+                        <div class="form-group required control-label"><label class="col-md-2 control-label">Kullanıcı Adı</label><div class="col-md-4"><input class="form-control" id="id_nickname" name="KULLANICIADI" placeholder="Nickname" required="required" title="" type="text" /></div></div>
+                        <div class="form-group required control-label"><label class="col-md-2 control-label">Şifre</label><div class="col-md-4"><input class="form-control" id="id_password1" name="SIFRE" placeholder="Password" required="required" title="" type="password" /></div></div>
+                        <div class="form-group required control-label"><label class="col-md-2 control-label">Şifre (tekrar)</label><div class="col-md-4"><input class="form-control" id="id_password2" name="SIFRE" placeholder="Password (again)" required="required" title="" type="password" /></div></div>
+                        <div class="form-group required control-label"><label class="col-md-2 control-label">&#160;</label><div class="col-md-4"><div class="checkbox"><label><input class="" id="id_tos" name="tos" required="required" type="checkbox" />Üyelik Sözleşmesini Kabul Ediyorum</label></div></div></div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary" id="btn1">
+                                    Üye Ekle
+
+                                </button>
+
+
+                                <!--  <a href="/Uye/Index/"><input type="button" value="Üye Listesi" class="btn btn-primary" /></a>-->
+                            </div>
+                        </div>
+
+                    </form>
+
+                </td>
+
+            </tr>
+
+
+
+        </table>
+
+        <style>
+            .hesap {
+                color: teal;
+            }
+
+            .hesapAcma {
+                color: #3b991e;
+            }
+
+            .link {
+                color: #3b991e;
+            }
+
+            .form-group.required.control-label::before {
+                color: red;
+                content: "*";
+                position: absolute;
+                margin-left: -10px;
+            }
+
+
+            .form-group {
+                color: white;
+                background-color: rgb(245, 129, 109);
+                width: 350px;
+                height: 42px;
+            }
+
+            .btn {
+                color: white;
+                background-color: teal;
+            }
+        </style>
+
+
+
+    </body>
+
+    </html>

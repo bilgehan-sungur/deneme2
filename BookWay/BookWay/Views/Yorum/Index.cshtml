@@ -1,0 +1,37 @@
+﻿
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+  
+      
+        <h2>Yorumlar</h2>
+        <table class="table table-bordered">
+
+            <tr>
+                <th>Gönderen</th>
+                <th>Yorum</th>
+                <th>Tarih</th>
+
+
+            </tr>
+            @foreach (var yazi in Model)
+            {
+                <tr>
+                    <td>@yazi.GONDEREN</td>
+                    <td>@yazi.ICERIK</td>
+                    <td>@yazi.TARIH</td>
+
+
+
+
+
+                </tr>
+            }
+            <div class="form-group required control-label"><label class="col-md-2 control-label"></label><div class="col-md-4"><input class="form-control" id="id_last_name" maxlength="30" name="ICERIK" placeholder="yorum" required="required" title="" type="text" /></div></div>
+            <a href="/Yorum/Contact/" class=" btn btn-info">Ekle</a>
+        </table>
+    </body>
+    </html>

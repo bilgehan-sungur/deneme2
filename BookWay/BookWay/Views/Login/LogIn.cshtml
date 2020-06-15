@@ -1,0 +1,128 @@
+﻿
+@{
+    ViewBag.Title = "LogIn";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+    <html>
+    <head>
+        <style>
+            * {
+                box-sizing: border-box
+            }
+
+            /* Full-width input fields */
+            input[type=text], input[type=password] {
+                width: 100%;
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                display: inline-block;
+                border: none;
+                background: #f1f1f1;
+            }
+
+                input[type=text]:focus, input[type=password]:focus {
+                    background-color: #ddd;
+                    outline: none;
+                }
+
+            hr {
+                border: 1px solid #f1f1f1;
+                margin-bottom: 25px;
+            }
+
+            /* Set a style for all buttons */
+            button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                opacity: 0.9;
+            }
+
+                button:hover {
+                    opacity: 1;
+                }
+
+            /* Extra styles for the cancel button */
+            .cancelbtn {
+                padding: 14px 20px;
+                background-color: #f44336;
+            }
+            .signupbtn {
+                padding: 14px 20px;
+                background-color: #74b9ff;
+            }
+            /* Float cancel and signup buttons and add an equal width */
+            .cancelbtn, .signupbtn {
+                float: left;
+                width: 50%;
+            }
+
+            /* Add padding to container elements */
+            .container {
+                padding: 100px;
+            }
+
+            /* Clear floats */
+            .clearfix::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+            /* Change styles for cancel button and signup button on extra small screens */
+            @@media screen and (max-width: 300px) {
+                .cancelbtn, .signupbtn {
+                    width: 100%;
+                }
+            #uye{
+                padding: 100px;
+            }
+            }
+        </style>
+
+    </head>
+    <body bgcolor="#DBCDC0">
+        <table>
+            <tr align ="center">
+                <td>
+                    <div class="resim">
+                        <img src="/Content/font/okuyan Maymun.PNG" width="170px" height="170px">
+                    </div>
+                <td>
+                    <div class="resimm">
+                        <br><br>
+                         <class="yazi"><h1> KitapYolu.com</h1></b>
+                    </div>
+                    </a>
+                </td>
+                </td>
+            </tr>
+        </table>
+        <br><br>
+        @using (Html.BeginForm("LogIn", "Login", FormMethod.Post))
+        {
+            <div class="container">
+                <h1>Giriş Yap</h1>
+                <hr>
+
+                <input type="text" placeholder="Kullanıcı adını giriniz" name="KULLANICIADI" required>
+
+                <input type="password" placeholder="Şifreyi giriniz" name="SIFRE" required>
+
+
+
+                <div class="clearfix">
+
+                    <a href="/Home/GirisYap/"> <input type="submit" class="signupbtn" value="Giriş Yap"></a>
+                    <a href="/Uye/UyeEkle/">  <input type="button" class="cancelbtn" value="Üye Ol" id="uye"></a>
+                </div>
+            </div>
+
+        }
+
+    </body>
+    </html>

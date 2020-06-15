@@ -1,0 +1,456 @@
+﻿
+@{
+    ViewBag.Title = "yeni_cikan_sinav";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<html>
+<head>
+    <title>kitapyolu.com</title>
+    <script type="text/javascript" src="~/Scripts/JQery.js"></script>
+    <meta charset="utf-8">
+
+    <style>
+
+
+        .yazi {
+            color: green;
+            height: 390px;
+        }
+
+
+        .ilber {
+            border-color: #08c221;
+            border-width: 5px;
+            border-style: double;
+            border-right: firebrick;
+            background-color: rgb(226, 196, 169);
+        }
+
+        .funfun {
+            border-color: #08c221;
+            border-width: 5px;
+            border-style: double;
+            border-left: firebrick;
+        }
+
+        div {
+            display: none;
+            border-style: solid;
+            border-color: #DBCDC0;
+            border-width: 10px 10px 10px 0px;
+            margin-bottom: 5px;
+        }
+
+        .totop a {
+            display: none;
+        }
+
+        a, a:visited {
+            color: #33739E;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+        }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+        #loadMore {
+            padding: 10px;
+            text-align: center;
+            background-color: yellowgreen;
+            color: #fff;
+            border-width: 0 1px 10px 1000px;
+            border-style: solid;
+            border-color: #DBCDC0;
+            box-shadow: 0 1px 1px #ccc;
+            transition: all 600ms ease-in-out;
+            -webkit-transition: all 600ms ease-in-out;
+            -moz-transition: all 600ms ease-in-out;
+            -o-transition: all 600ms ease-in-out;
+        }
+
+            #loadMore:hover {
+                background-color: rgb(202, 101, 101);
+                color: #fff;
+            }
+    </style>
+    <script>
+
+    $(function () {
+        $("div").slice(0, 4).show();
+        $("#loadMore").on('click', function (e) {
+            e.preventDefault();
+            $("div:hidden").slice(0, 4).slideDown();
+            if ($("div:hidden").length == 0) {
+                $("#load").fadeOut('slow');
+            }
+            $('html,body').animate({
+                scrollTop: $(this).offset().top
+            }, 1500);
+        });
+    });
+
+
+
+
+
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .checked {
+            color: orange;
+        }
+    </style>
+
+</head>
+<body bgcolor="#DBCDC0">
+
+    <table>
+        <tr>
+            <td>
+
+                <a href="/Home/GirisYap/"> <img src="/Content/font/okuyan Maymun.PNG" width="170px" height="170px">
+
+            <td>
+
+                <br><br>
+                <b href="/Home/GirisYap/" class="yazi"><h1> KitapYolu.com</h1></b>
+
+                </a>
+            </td>
+            </td>
+        </tr>
+    </table>
+
+
+
+    <br><br>
+
+
+
+    <style>
+        .renk {
+            color: purple;
+        }
+
+        .resim-zoom {
+            width: 100px;
+            height: 100px;
+        }
+
+        .resim-zoom {
+            position: relative;
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            -moz-transform: scale(1);
+            transition: all.3s ease-in;
+            -moz-transition: all.3s ease-in;
+            -webkit-transition: all.3s ease-in;
+            -ms-transition: all.3s ease-in;
+        }
+
+            .resim-zoom:hover {
+                z-index: 2;
+                -webkit-transform: scale(1.5);
+                -ms-transform: scale(1.5);
+                -moz-transform: scale(1.5);
+                transform: scale(1.5);
+            }
+    </style>
+
+
+
+    <div class="kitaplarimerkezle" align="center">
+        <table class="yanyanakucukresimler" style="border: 1px solid rgb(20, 148, 3); color: rgb(2, 45, 48); width: 1100px; background-color:darksalmon">
+
+            <tr align="center">
+            <tr>
+                <h2 class="renk">Yeni Çıkan Kitaplar</h2>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/yabancı.html"><img class="resim-zoom" src="/Content/font/yabancı.PNG">
+
+                </td>
+
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/anna.html"> <img class="resim-zoom" src="/Content/font/anna.PNG">
+
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/incirkuslari.html"><img class="resim-zoom" src="/Content/font/incirkuslari.PNG">
+                </td>
+
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/bogurtlen.html"><img class="resim-zoom" src="/Content/font/bogurtlen.PNG">
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/körlük.html"><img class="resim-zoom" src="/Content/font/körlük.PNG" alt="">
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/simyacı.html"><img class="resim-zoom" src="/Content/font/simyacı1.PNG">
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/şekerportakalı.html"><img class="resim-zoom" src="/Content/font/şekerportakalı.PNG">
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/bilinmeyen.html">  <img class="resim-zoom" src="/Content/font/bilinmeyenbirkadın.PNG">
+
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/birvarmis.html"><img class="resim-zoom" src="/Content/font/birvarmis.PNG">
+
+                </td>
+
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/idam.html"> <img class="resim-zoom" src="/Content/font/idam.PNG">
+
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/jane.html"><img class="resim-zoom" src="/Content/font/jane.PNG">
+                </td>
+
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/kinyas.html"><img class="resim-zoom" src="/Content/font/kinyas.PNG">
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/körlük.html"><img class="resim-zoom" src="/Content/font/yilan.PNG" alt="">
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/korku.html"><img class="resim-zoom" src="/Content/font/korku.PNG">
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/olagan.html"><img class="resim-zoom" src="/Content/font/olaganustu.PNG">
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/fahre.html">  <img class="resim-zoom" src="/Content/font/fahre.PNG">
+
+                </td>
+
+
+            </tr>
+
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/buraya.html"><img class="resim-zoom" src="/Content/font/buraya.PNG">
+
+                </td>
+
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/ilber.html"> <img class="resim-zoom" src="/Content/font/birOmur.PNG">
+
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/yolarkadasim.html"><img class="resim-zoom" src="/Content/font/yolarkadasim.PNG">
+                </td>
+
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/kendineinanmak.html"><img class="resim-zoom" src="/Content/font/kendineinanmak.PNG">
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/kisiselcilginligi.html"><img class="resim-zoom" src="/Content/font/kisiselcilginlik.PNG" alt="">
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/felsefeyle.html"><img class="resim-zoom" src="/Content/font/felsefeyle.PNG">
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/psikoloji.html"><img class="resim-zoom" src="/Content/font/psikoloji.PNG">
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/mukemmellik.html">  <img class="resim-zoom" src="/Content/font/mukemmellik.PNG">
+
+                </td>
+
+            </tr>
+            <tr>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/dikenler.html"><img class="resim-zoom" src="/Content/font/dikenler.PNG">
+
+                </td>
+
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/birvarmis.html"> <img class="resim-zoom" src="/Content/font/birvarmis.PNG">
+
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/fahre.html"><img class="resim-zoom" src="/Content/font/fahre.PNG">
+                </td>
+
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/stephenyabanci.html"><img class="resim-zoom" src="/Content/font/stephen.PNG">
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/körlük.html"><img class="resim-zoom" src="/Content/font/körlük.PNG" alt="">
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/kinyas.html"><img class="resim-zoom" src="/Content/font/kinyas.PNG">
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/incirkuslari.html"><img class="resim-zoom" src="/Content/font/incirkuslari.PNG">
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/simyac%C4%B1.html">  <img class="resim-zoom" src="/Content/font/simyacı1.PNG">
+
+                </td>
+
+
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/jane.html"><img class="resim-zoom" src="/Content/font/jane.PNG">
+
+                </td>
+
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/k%C3%B6rl%C3%BCk.html"> <img class="resim-zoom" src="/Content/font/yilan.PNG">
+
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/felsefeyle.html"><img class="resim-zoom" src="/Content/font/felsefeyle.PNG">
+                </td>
+
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/mukemmellik.html"><img class="resim-zoom" src="/Content/font/mukemmellik.PNG">
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/toprak.html"><img class="resim-zoom" src="/Content/font/toprak.PNG" alt="">
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/1984.html"><img class="resim-zoom" src="/Content/font/1984.PNG">
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/olagan.html"><img class="resim-zoom" src="/Content/font/olaganustu.PNG">
+
+                </td>
+
+                <td>
+                    <a href="file:///C:/Users/dell/Desktop/Okul%20Web%201.%20HAFTA/okul%20web/odev/stephenyabanci.html">  <img class="resim-zoom" src="/Content/font/stephen.PNG">
+
+                </td>
+
+
+            </tr>
+
+
+
+
+        </table>
+    </div>
+
+
+
+
+
+    <script type="text/javascript">
+
+        $('#button-bargain').bind('click', function () {
+            url = 'index.php?route=product/bargain';
+
+            url += '&category=' + $('select[name=\'category\']').attr('value');
+            url += '&discount=' + $('select[name=\'discount\']').attr('value');
+
+            var price = $('input[name=\'price\']').attr('value');
+            if (price) {
+                url += '&price=' + encodeURIComponent(price);
+            }
+
+            // Default filter_in_stock = 1
+            url += '&filter_in_stock=1';
+
+            location = url;
+        });
+
+
+        updateProductViews();
+
+        //--></script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
