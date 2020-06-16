@@ -17,6 +17,8 @@ namespace BookWay.Controllers
             var degerler = db.UyeKayit.ToList();
             return View(degerler);
         }
+       
+
         [HttpGet]
         public ActionResult UyeEkle()
         {
@@ -35,7 +37,25 @@ namespace BookWay.Controllers
             var uye = db.UyeKayit.Find(id);
             db.UyeKayit.Remove(uye);
             db.SaveChanges();
-            return RedirectToAction("Index","Uye");
+            return RedirectToAction("Index");
+        }
+        public ActionResult UyeGetir(int id)
+        {
+            var uye = db.UyeKayit.Find(id);
+            return View("UyeGetir",uye);
+        }
+        public ActionResult UyeGuncelle(UyeKayit u)
+        {
+            var uye = db.UyeKayit.Find(u.ID);
+            uye.KULLANICIADI = u.KULLANICIADI;
+            uye.AD = u.AD;
+            uye.SOYAD = u.SOYAD;
+            uye.EMAIL = u.EMAIL;
+            uye.SIFRE = u.SIFRE;
+
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
         }
     }
 }

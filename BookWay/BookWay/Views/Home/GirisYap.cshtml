@@ -170,13 +170,27 @@
                         <!--begin::Signin-->
                         <div class="m-login__signin">
                             <div class="m-login__title">
-                                @if (Session["Kullanıcı"] != null)
+                                @if (Session["Kullanıcı"] == "Admin")
                                 {
-                                <div class="sekil">
-                                    <h2>@Session["Kullanıcı"] adlı kullanıcı ile giriş yapıldı.</h2>
-                                    <a href="/Login/LogIn/"><input type="submit" class="signupbtn" value="Çıkış Yap" /></a>
-                                </div>
+                                    <div class="sekil">
+                                        <h2>@Session["Kullanıcı"] adlı kullanıcı ile giriş yapıldı.</h2>
+                                        <a href="/Login/LogIn/"><input type="submit" class="signupbtn" value="Çıkış Yap" /></a>
+                                        <a href="/Uye/Index/"><input type="submit" class="signupbtn" value="Üyeler Listesi" /></a>
+                                    </div>
                                 }
+                                else if (Session["Kullanıcı"] != null || Session["Kullanıcı"] != "Admin")
+                                {
+                                    <div class="sekil">
+                                        <h2>@Session["Kullanıcı"] adlı kullanıcı ile giriş yapıldı.</h2>
+                                        <a href="/Login/LogIn/"><input type="submit" class="signupbtn" value="Çıkış Yap" /></a>
+                                        
+                                    </div>
+                                }
+                                else
+                                {
+
+                                }
+
 
 
                             </div>

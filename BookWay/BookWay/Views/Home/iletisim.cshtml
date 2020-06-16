@@ -1,0 +1,199 @@
+﻿
+@{
+    ViewBag.Title = "iletisim";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+
+<html>
+<head>
+    <title>kitapyolu.com</title>
+    <script type="text/javascript" src="~/Scripts/JQery.js"></script>
+    <meta charset="utf-8">
+
+    <style>
+
+        .merkez {
+            color: #33739E;
+        }
+
+        .yazi {
+            color: green;
+            height: 390px;
+        }
+
+
+        .ilber {
+            border-color: #08c221;
+            border-width: 5px;
+            border-style: double;
+            border-right: firebrick;
+            background-color: rgb(226, 196, 169);
+        }
+
+        .funfun {
+            border-color: #08c221;
+            border-width: 5px;
+            border-style: double;
+            border-left: firebrick;
+        }
+
+        div {
+            display: none;
+            border-style: solid;
+            border-color: #DBCDC0;
+            border-width: 10px 10px 10px 0px;
+            margin-bottom: 5px;
+        }
+
+        .totop a {
+            display: none;
+        }
+
+        a, a:visited {
+            color: #33739E;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+        }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+        #loadMore {
+            padding: 10px;
+            text-align: center;
+            background-color: yellowgreen;
+            color: #fff;
+            border-width: 0 1px 10px 1000px;
+            border-style: solid;
+            border-color: #DBCDC0;
+            box-shadow: 0 1px 1px #ccc;
+            transition: all 600ms ease-in-out;
+            -webkit-transition: all 600ms ease-in-out;
+            -moz-transition: all 600ms ease-in-out;
+            -o-transition: all 600ms ease-in-out;
+        }
+
+            #loadMore:hover {
+                background-color: rgb(202, 101, 101);
+                color: #fff;
+            }
+            #personel {
+                width: 100%;
+                font: bold 1.25em "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+                border: 20px solid #C1DAD7;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                text-align: left;
+                padding: 6px 6px 6px 12px;
+                background: #C1DAD7;
+                border-collapse: collapse;
+            }
+
+                #personel th {
+                    color: #54737A;
+                    padding: 6px 6px 6px 12px;
+                }
+
+                #personel td {
+                    padding: 6px 6px 6px 12px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 300;
+                }
+
+                #personel tr {
+                    color: #6D929B;
+                    background: #fff;
+                }
+
+                    #personel tr:hover {
+                        background: #CAE8EA;
+                        color: #fff;
+                    }
+    </style>
+    <script>
+
+    $(function () {
+        $("div").slice(0, 4).show();
+        $("#loadMore").on('click', function (e) {
+            e.preventDefault();
+            $("div:hidden").slice(0, 4).slideDown();
+            if ($("div:hidden").length == 0) {
+                $("#load").fadeOut('slow');
+            }
+            $('html,body').animate({
+                scrollTop: $(this).offset().top
+            }, 1500);
+        });
+    });
+
+
+
+
+
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .checked {
+            color: orange;
+        }
+    </style>
+
+</head>
+<body bgcolor="#DBCDC0">
+
+
+    <!--<font color="green"> </font>     <TABLO GELECEK>    -->
+    <table>
+        <tr>
+            <td>
+                <div class="resim">
+                    <a href="/Home/GirisYap/"> <img src="/Content/font/okuyan maymun.PNG" width="170px" height="170px">
+                </div>
+            <td>
+                <div class="resimm">
+                    <br><br>
+                    <b href="/Home/GirisYap/" class="yazi"><h1> KitapYolu.com</h1></b>
+                </div>
+                </a>
+            </td>
+            </td>
+        </tr>
+
+
+    </table>
+    <br><br>
+
+
+    <table align="center" id="personel">
+        <tr>
+            <h1 align="center" class="link">Bizimle İletişime Geçin</h1>
+            <td>
+                <a href="https://accounts.google.com/ServiceLogin/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=AddSession"> <h2>fun15@gmail.com</h2> </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="https://accounts.google.com/ServiceLogin/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=AddSession"><h2>bil23@gmail.com</h2></a>
+            </td>
+        </tr>
+    </table>
+
+
+    <br><br>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+

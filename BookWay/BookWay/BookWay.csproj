@@ -283,6 +283,8 @@
     <Content Include="Views\Home\yeni_cikan_sinav.cshtml" />
     <Content Include="Views\Home\yeni_cikan_bilgisayar.cshtml" />
     <Content Include="Views\Home\tum_kitaplar.cshtml" />
+    <Content Include="Views\Uye\UyeGetir.cshtml" />
+    <Content Include="Views\Home\iletisim.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
